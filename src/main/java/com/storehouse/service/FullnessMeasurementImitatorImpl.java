@@ -28,11 +28,7 @@ public class FullnessMeasurementImitatorImpl implements FullnessMeasurementImita
 
 	private int getStatus(int number) {
 		Integer value = containersStatus.get(number);
-		return value == null ? tlr.nextInt(minPercent, maxPercent) : getNewStatus(number);
-	}
-
-	private int getNewStatus(int number) {
-		return tlr.nextInt(minPercent, containersStatus.get(number));
+		return value == null ? tlr.nextInt(minPercent, maxPercent) : tlr.nextInt(minPercent, containersStatus.get(number));
 	}
 
 	private Container getContainer(int number) {
