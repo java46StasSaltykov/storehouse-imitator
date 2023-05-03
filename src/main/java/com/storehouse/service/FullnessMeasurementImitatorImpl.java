@@ -23,6 +23,7 @@ public class FullnessMeasurementImitatorImpl implements FullnessMeasurementImita
 	public FullnessMeasurement nextMeasurement() {
 		Container container = getContainer(tlr.nextInt(1, nContainers));
 		int status = getStatus(container.number);
+		containersStatus.put(container.number, status);
 		return new FullnessMeasurement(container, status);
 	}
 
