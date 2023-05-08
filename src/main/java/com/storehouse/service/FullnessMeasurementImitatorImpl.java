@@ -21,7 +21,7 @@ public class FullnessMeasurementImitatorImpl implements FullnessMeasurementImita
 	
 	@Override
 	public FullnessMeasurement nextMeasurement() {
-		Container container = getContainer(tlr.nextInt(1, nContainers));
+		Container container = getContainer(tlr.nextInt(1, nContainers + 1));
 		int status = getStatus(container.number);
 		containersStatus.put(container.number, status);
 		return new FullnessMeasurement(container, status);
@@ -33,7 +33,7 @@ public class FullnessMeasurementImitatorImpl implements FullnessMeasurementImita
 	}
 
 	private Container getContainer(int number) {
-		return new Container(number, "Apple", "Kilo", 1000);
+		return new Container(number, "Product", "Kilo", 1000);
 	}
 
 }
