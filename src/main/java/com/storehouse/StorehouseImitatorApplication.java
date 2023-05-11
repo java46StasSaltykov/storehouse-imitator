@@ -5,7 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
-import com.storehouse.model.FullnessMeasurement;
+import com.storehouse.model.ContainerMeasurementDto;
 import com.storehouse.service.FullnessMeasurementImitator;
 
 @SpringBootApplication
@@ -19,7 +19,7 @@ public class StorehouseImitatorApplication {
 	}
 	
 	@Bean
-	Supplier<FullnessMeasurement> fullnessMeasurementSupplier() {
+	Supplier<ContainerMeasurementDto> fullnessMeasurementSupplier() {
 		return imitator::nextMeasurement;
 	}
 

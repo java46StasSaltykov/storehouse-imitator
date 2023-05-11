@@ -1,9 +1,9 @@
 package com.storehouse.service;
 
-import com.storehouse.model.FullnessMeasurement;
+import com.storehouse.model.ContainerMeasurementDto;
 
 public interface FullnessMeasurementImitator {
 	
-	FullnessMeasurement nextMeasurement();
+	ContainerMeasurementDto nextMeasurement();
 
 }
